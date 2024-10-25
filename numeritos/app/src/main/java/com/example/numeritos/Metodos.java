@@ -155,6 +155,8 @@ public class Metodos {
                     return "veintiún " + miles + metodo5.diecesmet5(textote);
                 } else if (mil1==2 && mil2==1){
                     return "veintiún " + miles + " " + metodo5.excepmet5(textote);
+                }else if (mil1==1 && mil2>0){
+                    return dieces[mil2] + " " + miles + " " + metodo5.excepmet5(textote);
                 }else if (mil2==1) {
                     return decenas[mil1] + " y un "  + miles + " " + metodo5.excepmet5(textote);
                 }
