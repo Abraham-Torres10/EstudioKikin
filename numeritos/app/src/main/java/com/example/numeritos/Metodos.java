@@ -201,26 +201,73 @@ public class Metodos {
 
         if (mil1 == 0 && mil2 == 0 && centenita == 0 && unidadcita == 0 && decenita == 0) {
             return centenas[mil3] + " " + miles;
-        } else if (mil3 == 1) {
-            if (mil1==2 && mil2==1 && decenita==2)
-                return centenas[mil3] + " " + cienes + " veintiún " + metodo6.veintesmet6(textote);
+        }
+             else if (mil1 == 0 && mil2 == 1) {
+                if (centenita == 0 && unidadcita == 0 && decenita == 0)
+                    return centenas[mil3] + cienes + " un " + miles;
+                else
+                    return centenas[mil3] + cienes + " un "+ miles + " " + metodo6.excepmet6(textote);
+            } else if (mil1 == 0 && mil2 > 1) {
+                if (mil3==1) {
+                    if (centenita == 0 && unidadcita == 0 && decenita == 0)
+                        return centenas[mil3] + cienes + " " + unidades[mil2] + " " + miles;
+                    else
+                        return centenas[mil3] + cienes + " " + unidades[mil2] + " " + miles + " " + metodo6.excepmet6(textote);
+                }else {
+                    if (centenita == 0 && unidadcita == 0 && decenita == 0)
+                        return centenas[mil3] + " " + unidades[mil2] + " " + miles;
+                    else
+                        return centenas[mil3] + " " + unidades[mil2] + " " + miles + " " + metodo6.excepmet6(textote);
+                }
+            }
+           else if (mil3 == 1) {
+            if (mil1==2 && mil2==1 && decenita==2) {
+                return centenas[mil3] + cienes + " veintiún " + metodo6.veintesmet6(textote);
+            }
             else if (mil1==2 && mil2==1 && decenita==1) {
-                return centenas[mil3] + " " + cienes + " veintiún " + metodo6.diecesmet6(textote);
+                return centenas[mil3] + cienes + " veintiún " + metodo6.diecesmet6(textote);
             } else if (mil1==2 && mil2==1){
-                return centenas[mil3] + " " + cienes + " veintiún " + miles + " " + metodo6.excepmet6(textote);
-            }else if (mil2==1){
-                return centenas[mil3] + " " + cienes + decenas[mil1] + " y un " + miles + " " + metodo6.excepmet6(textote);
+                return centenas[mil3] + cienes + " veintiún " + miles + " " + metodo6.excepmet6(textote);
+            }else if (mil1==2 && mil2>1){
+                return centenas[mil3] + cienes + " " + veintes[mil2] + " " + miles + " " + metodo6.excepmet6(textote);
+            }else if (mil1==1 && mil2==0){
+                return centenas[mil3] + cienes + " " + decenas[mil1] + " " + miles + " " + metodo6.excepmet6(textote);
+            }else if (mil1==1 && mil2>0){
+                return centenas[mil3] + cienes + " " + dieces[mil2] + " " + miles + " " + metodo6.excepmet6(textote);
+            } else if (mil1==2 && mil2==0 && decenita==1) {
+                return centenas[mil3] + cienes + " veinte " + metodo6.diecesmet6(textote);
+            }else if (mil1==2 && mil2==0 && decenita==2) {
+                return centenas[mil3] +  cienes + " veinte " + metodo6.veintesmet6(textote);
+            }else if (mil1==2 && mil2==0) {
+                return centenas[mil3] +  cienes + " veinte " + miles + " " + metodo6.excepmet6(textote);
+            } else if (mil2==1){
+                return centenas[mil3] + cienes + " " + decenas[mil1] + " y un " + miles + " " + metodo6.excepmet6(textote);
             }else
-            return centenas[mil3] + " " + cienes + " " + metodo6.cienmilesmet6(textote);
-        } else{
+            return centenas[mil3] + cienes + " " + metodo6.cienmilesmet6(textote);
+            }
+            else{
             if (mil1==2 && mil2==1 && decenita==2)
                 return centenas[mil3] + " veintiún " + metodo6.veintesmet6(textote);
             else if (mil1==2 && mil2==1 && decenita==1) {
                 return centenas[mil3] +  " veintiún " + metodo6.diecesmet6(textote);
-            } else if (mil1==2 && mil2==1){
+            } else if (mil1==2 && mil2==0 && decenita==1) {
+                return centenas[mil3] +  " veinte " + metodo6.diecesmet6(textote);
+            }else if (mil1==2 && mil2==0 && decenita==2) {
+                return centenas[mil3] +  " veinte " + metodo6.veintesmet6(textote);
+            }else if (mil1==2 && mil2==1){
                 return centenas[mil3] + " veintiún " + miles + " " + metodo6.excepmet6(textote);
-            }else if (mil2==1){
-                return centenas[mil3] + decenas[mil1] + " y un " + miles + " " + metodo6.excepmet6(textote);
+            }else if (mil1==2 && mil2>1){
+                return centenas[mil3] + " " + veintes[mil2] + " " + miles + " " + metodo6.excepmet6(textote);
+            }else if (mil1==0 && mil2==0){
+                return centenas[mil3] + " " + miles + " " + metodo6.excepmet6(textote);
+            }else if (mil1==1 && mil2==0){
+                return centenas[mil3] + " " + decenas[mil1] + " " + miles + " " + metodo6.excepmet6(textote);
+            }else if (mil1==1 && mil2>0){
+                return centenas[mil3] + " " + dieces[mil2] + " " + miles + " " + metodo6.excepmet6(textote);
+            }else if (mil1==2 && mil2==0) {
+                return centenas[mil3] +  " veinte " + miles + " " + metodo6.excepmet6(textote);
+            } else if (mil2==1){
+                return centenas[mil3] + " "+ decenas[mil1] + " y un " + miles + " " + metodo6.excepmet6(textote);
             }
             return  centenas[mil3] + " "+ metodo6.cienmilesmet6(textote);
         }

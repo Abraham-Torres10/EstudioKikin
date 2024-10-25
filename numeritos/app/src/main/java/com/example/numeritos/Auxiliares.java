@@ -269,83 +269,83 @@ public class Auxiliares {
 
 
         if (mil1==0){
-          if (mil2 == 0) {
-            if (centenita == 0) {
-                if (decenita == 0) {
-                    return miles + " " + unidades[unidadcita];
-                } else if (decenita == 1 && unidadcita > 0) {
-                    return miles + " " + dieces[unidadcita];
-                } else if (decenita == 2 && unidadcita > 0) {
-                    return miles + " " + veintes[unidadcita];
-                } else if (unidadcita == 0) {
-                    return miles + " " + decenas[decenita];
-                } else
-                    return miles + " " + decenas[decenita] + " y " + unidades[unidadcita];
-            } else if (centenita == 1) {
-                if (decenita == 0) {
-                    return miles + " " + centenas[centenita] + cienes + " " + unidades[unidadcita];
-                } else if (decenita == 1 && unidadcita > 0) {
-                    return miles + " " + centenas[centenita] + cienes + " " + dieces[unidadcita];
-                } else if (decenita == 2 && unidadcita > 0) {
-                    return miles + " " + centenas[centenita] + cienes + " " + veintes[unidadcita];
-                } else if (unidadcita == 0) {
-                    return miles + " " + centenas[centenita] + cienes + " " + decenas[decenita];
-                } else
-                    return miles + " " + centenas[centenita] + cienes + " " + decenas[decenita] + " y " + unidades[unidadcita];
-            } else {
-                if (decenita == 0) {
-                    return miles + " " + centenas[centenita] + " " + unidades[unidadcita];
-                } else if (decenita == 1 && unidadcita > 0) {
-                    return miles + " " + centenas[centenita] + " " + dieces[unidadcita];
-                } else if (decenita == 2 && unidadcita > 0) {
-                    return miles + " " + centenas[centenita] + " " + veintes[unidadcita];
-                } else if (unidadcita == 0) {
-                    return miles + " " + centenas[centenita] + " " + decenas[decenita];
-                } else
-                    return miles + " " + centenas[centenita] + " " + decenas[decenita] + " y " + unidades[unidadcita];
+            if (mil2 == 0) {
+                if (centenita == 0) {
+                    if (decenita == 0) {
+                        return miles + " " + unidades[unidadcita];
+                    } else if (decenita == 1 && unidadcita > 0) {
+                        return miles + " " + dieces[unidadcita];
+                    } else if (decenita == 2 && unidadcita > 0) {
+                        return miles + " " + veintes[unidadcita];
+                    } else if (unidadcita == 0) {
+                        return miles + " " + decenas[decenita];
+                    } else
+                        return miles + " " + decenas[decenita] + " y " + unidades[unidadcita];
+                } else if (centenita == 1) {
+                    if (decenita == 0) {
+                        return miles + " " + centenas[centenita] + cienes + " " + unidades[unidadcita];
+                    } else if (decenita == 1 && unidadcita > 0) {
+                        return miles + " " + centenas[centenita] + cienes + " " + dieces[unidadcita];
+                    } else if (decenita == 2 && unidadcita > 0) {
+                        return miles + " " + centenas[centenita] + cienes + " " + veintes[unidadcita];
+                    } else if (unidadcita == 0) {
+                        return miles + " " + centenas[centenita] + cienes + " " + decenas[decenita];
+                    } else
+                        return miles + " " + centenas[centenita] + cienes + " " + decenas[decenita] + " y " + unidades[unidadcita];
+                } else {
+                    if (decenita == 0) {
+                        return miles + " " + centenas[centenita] + " " + unidades[unidadcita];
+                    } else if (decenita == 1 && unidadcita > 0) {
+                        return miles + " " + centenas[centenita] + " " + dieces[unidadcita];
+                    } else if (decenita == 2 && unidadcita > 0) {
+                        return miles + " " + centenas[centenita] + " " + veintes[unidadcita];
+                    } else if (unidadcita == 0) {
+                        return miles + " " + centenas[centenita] + " " + decenas[decenita];
+                    } else
+                        return miles + " " + centenas[centenita] + " " + decenas[decenita] + " y " + unidades[unidadcita];
+                }
+            }else{
+                if (centenita == 0) {
+                    if (decenita == 0) {
+                        return unidades[mil2] + " " + miles + " " + unidades[unidadcita];
+                    } else if (decenita == 1 && unidadcita > 0) {
+                        return unidades[mil2] + " " + miles + " " + dieces[unidadcita];
+                    } else if (decenita == 2 && unidadcita > 0) {
+                        return unidades[mil2] + " " + miles + " " + veintes[unidadcita];
+                    } else if (unidadcita == 0) {
+                        return unidades[mil2] + " " + miles + " " + decenas[decenita];
+                    } else
+                        return unidades[mil2] + " " + miles + " " + decenas[decenita] + " y " + unidades[unidadcita];
+                } else if (centenita == 1) {
+                    if (decenita == 0) {
+                        return unidades[mil2] + " " + miles + " " + centenas[centenita] + cienes + " " + unidades[unidadcita];
+                    } else if (decenita == 1 && unidadcita > 0) {
+                        return unidades[mil2] + " " + miles + " " + centenas[centenita] + cienes + " " + dieces[unidadcita];
+                    } else if (decenita == 2 && unidadcita > 0) {
+                        return unidades[mil2] + " " + miles + " " + centenas[centenita] + cienes + " " + veintes[unidadcita];
+                    } else if (unidadcita == 0) {
+                        return unidades[mil2] + " " + miles + " " + centenas[centenita] + cienes + " " + decenas[decenita];
+                    } else
+                        return unidades[mil2] + " " + miles + " " + centenas[centenita] + cienes + " " + decenas[decenita] + " y " + unidades[unidadcita];
+                } else {
+                    if (decenita == 0) {
+                        return unidades[mil2] + " " + miles + " " + centenas[centenita] + " " + unidades[unidadcita];
+                    } else if (decenita == 1 && unidadcita > 0) {
+                        return unidades[mil2] + " " + miles + " " + centenas[centenita] + " " + dieces[unidadcita];
+                    } else if (decenita == 2 && unidadcita > 0) {
+                        return unidades[mil2] + " " + miles + " " + centenas[centenita] + " " + veintes[unidadcita];
+                    } else if (unidadcita == 0) {
+                        return unidades[mil2] + " " + miles + " " + centenas[centenita] + " " + decenas[decenita];
+                    } else
+                        return unidades[mil2] + " " + miles + " " + centenas[centenita] + " " + decenas[decenita] + " y " + unidades[unidadcita];
+                }
             }
-          }else{
-              if (centenita == 0) {
-                  if (decenita == 0) {
-                      return unidades[mil2] + " " + miles + " " + unidades[unidadcita];
-                  } else if (decenita == 1 && unidadcita > 0) {
-                      return unidades[mil2] + " " + miles + " " + dieces[unidadcita];
-                  } else if (decenita == 2 && unidadcita > 0) {
-                      return unidades[mil2] + " " + miles + " " + veintes[unidadcita];
-                  } else if (unidadcita == 0) {
-                      return unidades[mil2] + " " + miles + " " + decenas[decenita];
-                  } else
-                      return unidades[mil2] + " " + miles + " " + decenas[decenita] + " y " + unidades[unidadcita];
-              } else if (centenita == 1) {
-                  if (decenita == 0) {
-                      return unidades[mil2] + " " + miles + " " + centenas[centenita] + cienes + " " + unidades[unidadcita];
-                  } else if (decenita == 1 && unidadcita > 0) {
-                      return unidades[mil2] + " " + miles + " " + centenas[centenita] + cienes + " " + dieces[unidadcita];
-                  } else if (decenita == 2 && unidadcita > 0) {
-                      return unidades[mil2] + " " + miles + " " + centenas[centenita] + cienes + " " + veintes[unidadcita];
-                  } else if (unidadcita == 0) {
-                      return unidades[mil2] + " " + miles + " " + centenas[centenita] + cienes + " " + decenas[decenita];
-                  } else
-                      return unidades[mil2] + " " + miles + " " + centenas[centenita] + cienes + " " + decenas[decenita] + " y " + unidades[unidadcita];
-              } else {
-                  if (decenita == 0) {
-                      return unidades[mil2] + " " + miles + " " + centenas[centenita] + " " + unidades[unidadcita];
-                  } else if (decenita == 1 && unidadcita > 0) {
-                      return unidades[mil2] + " " + miles + " " + centenas[centenita] + " " + dieces[unidadcita];
-                  } else if (decenita == 2 && unidadcita > 0) {
-                      return unidades[mil2] + " " + miles + " " + centenas[centenita] + " " + veintes[unidadcita];
-                  } else if (unidadcita == 0) {
-                      return unidades[mil2] + " " + miles + " " + centenas[centenita] + " " + decenas[decenita];
-                  } else
-                      return unidades[mil2] + " " + miles + " " + centenas[centenita] + " " + decenas[decenita] + " y " + unidades[unidadcita];
-              }
-          }
         }
         else if (mil1 == 1){
-                 return centenas[mil3] + miles + " " + diecesmet6(textote);
-            }
-            else if (mil1 == 2){
-            return centenas[mil3] + miles + " " + veintesmet6(textote);
+            return diecesmet6(textote);
+        }
+        else if (mil1 == 2){
+            return veintesmet6(textote);
         } else {
             if (mil2 == 0) {
                 if (centenita == 0) {
@@ -445,7 +445,9 @@ public class Auxiliares {
             }else
                 return dieces[mil2] + " " + miles + " " + decenas[decenita] + " y " + unidades[unidadcita];
         } else if (centenita==1) {
-            if (decenita == 0) {
+            if (decenita == 0 && unidadcita==0) {
+                return dieces[mil2] + " " + miles + " "  + centenas[centenita];
+            } else if (decenita == 0) {
                 return dieces[mil2] + " " + miles + " "  + centenas[centenita] + cienes + " " +  unidades[unidadcita];
             } else
             if (decenita == 1 && unidadcita > 0) {
@@ -487,49 +489,49 @@ public class Auxiliares {
 
         if (centenita==0){
             if (decenita == 0) {
-                return veintes[mil2] + " " + miles + " "  + unidades[unidadcita];
+                return miles + " "  + unidades[unidadcita];
             } else
             if (decenita == 1 && unidadcita > 0) {
-                return veintes[mil2] + " " + miles + " " + dieces[unidadcita];
+                return miles + " " + dieces[unidadcita];
             }
             else
             if (decenita == 2 && unidadcita > 0) {
-                return veintes[mil2] + " " + miles + " " +  veintes[unidadcita];
+                return miles + " " +  veintes[unidadcita];
             } else
             if (unidadcita==0){
-                return veintes[mil2] + " " + miles + " " + decenas[decenita];
+                return miles + " " + decenas[decenita];
             }else
-                return veintes[mil2] + " " + miles + " " + decenas[decenita] + " y " + unidades[unidadcita];
+                return miles + " " + decenas[decenita] + " y " + unidades[unidadcita];
         } else if (centenita==1) {
             if (decenita == 0) {
-                return veintes[mil2] + " " + miles + " "  + centenas[centenita] + cienes + " " +  unidades[unidadcita];
+                return miles + " "  + centenas[centenita] + cienes + " " +  unidades[unidadcita];
             } else
             if (decenita == 1 && unidadcita > 0) {
-                return veintes[mil2] + " " + miles + " " + centenas[centenita] + cienes + " " + dieces[unidadcita];
+                return miles + " " + centenas[centenita] + cienes + " " + dieces[unidadcita];
             }
             else
             if (decenita == 2 && unidadcita > 0) {
-                return veintes[mil2] + " " + miles + " " +  centenas[centenita] + cienes + " " + veintes[unidadcita];
+                return miles + " " +  centenas[centenita] + cienes + " " + veintes[unidadcita];
             } else
             if (unidadcita==0){
-                return veintes[mil2] + " " + miles + " " + centenas[centenita] + cienes + " " + decenas[decenita];
+                return miles + " " + centenas[centenita] + cienes + " " + decenas[decenita];
             }else
-                return veintes[mil2] + " " + miles + " " + centenas[centenita] + cienes + " " + decenas[decenita] + " y " + unidades[unidadcita];
+                return miles + " " + centenas[centenita] + cienes + " " + decenas[decenita] + " y " + unidades[unidadcita];
         } else {
             if (decenita == 0) {
-                return veintes[mil2] + " " + miles + " "  + centenas[centenita] + " " +  unidades[unidadcita];
+                return miles + " "  + centenas[centenita] + " " +  unidades[unidadcita];
             } else
             if (decenita == 1 && unidadcita > 0) {
-                return veintes[mil2] + " " + miles + " " + centenas[centenita] + " " + dieces[unidadcita];
+                return miles + " " + centenas[centenita] + " " + dieces[unidadcita];
             }
             else
             if (decenita == 2 && unidadcita > 0) {
-                return veintes[mil2] + " " + miles + " " +  centenas[centenita] + " " + veintes[unidadcita];
+                return miles + " " +  centenas[centenita] + " " + veintes[unidadcita];
             } else
             if (unidadcita==0){
-                return veintes[mil2] + " " + miles + " " + centenas[centenita] + " " + decenas[decenita];
+                return miles + " " + centenas[centenita] + " " + decenas[decenita];
             }else
-                return veintes[mil2] + " " + miles + " " + centenas[centenita] + " " + decenas[decenita] + " y " + unidades[unidadcita];
+                return miles + " " + centenas[centenita] + " " + decenas[decenita] + " y " + unidades[unidadcita];
         }
     }
 
@@ -555,7 +557,9 @@ public class Auxiliares {
                 }else
                     return decenas[decenita] + " y " + unidades[unidadcita];
             } else if (centenita==1) {
-                if (decenita == 0) {
+                if (decenita == 0 && unidadcita==0) {
+                    return centenas[centenita];
+                }else if (decenita == 0) {
                     return centenas[centenita] + cienes + " " +  unidades[unidadcita];
                 } else
                 if (decenita == 1 && unidadcita > 0) {
