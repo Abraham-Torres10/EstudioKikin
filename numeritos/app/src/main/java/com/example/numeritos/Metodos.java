@@ -91,19 +91,32 @@ public class Metodos {
             }
         } else {
             if (mil1 == 1) {
+                if (centenita == 0) {
+                    if (decenita == 0) {
+                        return miles + " " + unidades[unidadcita];
+                    } else if (unidadcita == 0) {
+                        return miles + " " + decenas[decenita];
+                    } else if (decenita == 2 && unidadcita > 0) {
+                        return miles + " " + veintes[unidadcita];
+                    } else if (decenita == 1 && unidadcita > 0) {
+                        return miles + " " + dieces[unidadcita];
+                    } else {
+                        return miles + " " + decenas[decenita] + " y " + unidades[unidadcita];
+                    }
+                }
                 if (centenita == 1) {
                     if (decenita == 0 && unidadcita == 0) {
                         return miles + " " + centenas[centenita];
                     } else if (decenita == 0) {
-                        return miles + " " + centenas[centenita] + " " + unidades[unidadcita];
+                        return miles + " " + centenas[centenita] + cienes + " " + unidades[unidadcita];
                     } else if (unidadcita == 0) {
-                        return miles + " " + centenas[centenita] + " " + decenas[decenita];
+                        return miles + " " + centenas[centenita] + cienes + " " + decenas[decenita];
                     } else if (decenita == 2 && unidadcita > 0) {
-                        return unidades[mil1] + " " + miles + " " + centenas[centenita] + " " + veintes[unidadcita];
+                        return miles + " " + centenas[centenita] + cienes + " " + veintes[unidadcita];
                     } else if (decenita == 1 && unidadcita > 0) {
-                        return unidades[mil1] + " " + miles + " " + centenas[centenita] + " " + dieces[unidadcita];
+                        return miles + " " + centenas[centenita] + cienes + " " + dieces[unidadcita];
                     } else {
-                        return miles + " " + centenas[centenita] + " " + decenas[decenita] + " y " + unidades[unidadcita];
+                        return miles + " " + centenas[centenita] + cienes + " " + decenas[decenita] + " y " + unidades[unidadcita];
                     }
                 } else {
                     if (decenita == 0 && unidadcita == 0) {
@@ -121,14 +134,47 @@ public class Metodos {
                     }
                 }
             } else {
-                if (decenita == 2 && unidadcita > 0) {
-                    return unidades[mil1] + " " + miles + " " + centenas[centenita] + " " + veintes[unidadcita];
-                } else if (decenita == 1 && unidadcita > 0) {
-                    return unidades[mil1] + " " + miles + " " + centenas[centenita] + " " + dieces[unidadcita];
-                } else if (unidadcita == 0) {
-                    return unidades[mil1] + " " + miles + " " + centenas[centenita] + " " + decenas[decenita];
+                if (centenita == 0) {
+                    if (decenita == 0) {
+                        return unidades[mil1] + " " + miles + " " + unidades[unidadcita];
+                    } else if (unidadcita == 0) {
+                        return unidades[mil1] + " " + miles + " " + decenas[decenita];
+                    } else if (decenita == 2 && unidadcita > 0) {
+                        return unidades[mil1] + " " + miles + " " + veintes[unidadcita];
+                    } else if (decenita == 1 && unidadcita > 0) {
+                        return unidades[mil1] + " " + miles + " " + dieces[unidadcita];
+                    } else {
+                        return unidades[mil1] + " " + miles + " " + decenas[decenita] + " y " + unidades[unidadcita];
+                    }
+                }
+                if (centenita == 1) {
+                    if (decenita == 0 && unidadcita == 0) {
+                        return unidades[mil1] + " " + miles + " " + centenas[centenita];
+                    } else if (decenita == 0) {
+                        return unidades[mil1] + " " + miles + " " + centenas[centenita] + cienes + " " + unidades[unidadcita];
+                    } else if (unidadcita == 0) {
+                        return unidades[mil1] + " " + miles + " " + centenas[centenita] + cienes + " " + decenas[decenita];
+                    } else if (decenita == 2 && unidadcita > 0) {
+                        return unidades[mil1] + " " + miles + " " + centenas[centenita] + cienes + " " + veintes[unidadcita];
+                    } else if (decenita == 1 && unidadcita > 0) {
+                        return unidades[mil1] + " " + miles + " " + centenas[centenita] + cienes + " " + dieces[unidadcita];
+                    } else {
+                        return unidades[mil1] + " " + miles + " " + centenas[centenita] + cienes + " " + decenas[decenita] + " y " + unidades[unidadcita];
+                    }
                 } else {
-                    return unidades[mil1] + " " + miles + " " + centenas[centenita] + " " + decenas[decenita] + " y " + unidades[unidadcita];
+                    if (decenita == 0 && unidadcita == 0) {
+                        return unidades[mil1] + " " + miles + " " + centenas[centenita];
+                    } else if (decenita == 0) {
+                        return unidades[mil1] + " " + miles + " " + centenas[centenita] + " " + unidades[unidadcita];
+                    } else if (unidadcita == 0) {
+                        return unidades[mil1] + " " + miles + " " + centenas[centenita] + " " + decenas[decenita];
+                    } else if (decenita == 2 && unidadcita > 0) {
+                        return unidades[mil1] + " " + miles + " " + centenas[centenita] + " " + veintes[unidadcita];
+                    } else if (decenita == 1 && unidadcita > 0) {
+                        return unidades[mil1] + " " + miles + " " + centenas[centenita] + " " + dieces[unidadcita];
+                    } else {
+                        return unidades[mil1] + " " + miles + " " + centenas[centenita] + " " + decenas[decenita] + " y " + unidades[unidadcita];
+                    }
                 }
             }
         }
@@ -145,48 +191,32 @@ public class Metodos {
 
         if (mil2 == 0 && centenita == 0 && decenita == 0 && unidadcita == 0) {
             return decenas[mil1] + " " + miles;
-        } else if (mil1 == 1) {
+        }else if (mil1 == 1) {
             if (mil2 == 0) {
                 return metodo5.mil2es0(textote);
             } else {
-                if (mil1==2 && mil2==1 && decenita==2)
-                    return "veintiún " + miles + metodo5.veintesmet5(textote);
-                else if (mil1==2 && mil2==1 && decenita==1) {
-                    return "veintiún " + miles + metodo5.diecesmet5(textote);
-                } else if (mil1==2 && mil2==1){
-                    return "veintiún " + miles + " " + metodo5.excepmet5(textote);
-                }else if (mil1==1 && mil2>0){
+                if (mil2>0){
                     return dieces[mil2] + " " + miles + " " + metodo5.excepmet5(textote);
-                }else if (mil2==1) {
-                    return decenas[mil1] + " y un "  + miles + " " + metodo5.excepmet5(textote);
-                }
+                }else
                     return metodo5.diecesmet5(textote);
             }
         } else if (mil1 == 2) {
             if (mil2 == 0) {
                 return metodo5.mil2es0(textote);
             } else {
-                if (mil1==2 && mil2==1 && decenita==2)
-                    return "veintiún " + miles + metodo5.veintesmet5(textote);
-                else if (mil1==2 && mil2==1 && decenita==1) {
-                    return "veintiún " + miles + metodo5.diecesmet5(textote);
-                } else if (mil1==2 && mil2==1){
+                if (mil2==1 && decenita==2)
                     return "veintiún " + miles + " " + metodo5.excepmet5(textote);
-                }else if (mil2==1) {
-                    return decenas[mil1] + " y un "  + miles + " " + metodo5.excepmet5(textote);
-                }
+                else if (mil2==1 && decenita==1) {
+                    return "veintiún " + miles + " " + metodo5.excepmet5(textote);
+                } else if (mil2==1){
+                    return "veintiún " + miles + " " + metodo5.excepmet5(textote);
+                }else
                 return metodo5.veintesmet5(textote);
             }
         }else {
-            if (mil1==2 && mil2==1 && decenita==2)
-                return "veintiún " + miles + metodo5.veintesmet5(textote);
-            else if (mil1==2 && mil2==1 && decenita==1) {
-                return "veintiún " + miles + metodo5.diecesmet5(textote);
-            } else if (mil1==2 && mil2==1){
-                return "veintiún " + miles + " " + metodo5.excepmet5(textote);
-            }else if (mil2==1) {
+            if (mil2==1) {
                 return decenas[mil1] + " y un "  + miles + " " + metodo5.excepmet5(textote);
-            }
+            } else
             return metodo5.mil2random(textote);
         }
     }
@@ -203,8 +233,9 @@ public class Metodos {
 
         if (mil1 == 0 && mil2 == 0 && centenita == 0 && unidadcita == 0 && decenita == 0) {
             return centenas[mil3] + " " + miles;
-        }
-             else if (mil1 == 0 && mil2 == 1) {
+        } else if (mil1 == 0 && mil2 == 0) {
+                return centenas[mil3] + " " + miles + " " + metodo6.excepmet6(textote);
+        } else if (mil1 == 0 && mil2 == 1) {
                 if (centenita == 0 && unidadcita == 0 && decenita == 0)
                     return centenas[mil3] + cienes + " un " + miles;
                 else
@@ -227,7 +258,7 @@ public class Metodos {
                 return centenas[mil3] + cienes + " veintiún " + metodo6.veintesmet6(textote);
             }
             else if (mil1==2 && mil2==1 && decenita==1) {
-                return centenas[mil3] + cienes + " veintiún " + metodo6.diecesmet6(textote);
+                return centenas[mil3] + cienes + " veintiún mil " + metodo6.excepmet6(textote);
             } else if (mil1==2 && mil2==1){
                 return centenas[mil3] + cienes + " veintiún " + miles + " " + metodo6.excepmet6(textote);
             }else if (mil1==2 && mil2>1){
@@ -237,9 +268,9 @@ public class Metodos {
             }else if (mil1==1 && mil2>0){
                 return centenas[mil3] + cienes + " " + dieces[mil2] + " " + miles + " " + metodo6.excepmet6(textote);
             } else if (mil1==2 && mil2==0 && decenita==1) {
-                return centenas[mil3] + cienes + " veinte " + metodo6.diecesmet6(textote);
+                return centenas[mil3] + cienes + " veinte " + miles + " " +metodo6.excepmet6(textote);
             }else if (mil1==2 && mil2==0 && decenita==2) {
-                return centenas[mil3] +  cienes + " veinte " + metodo6.veintesmet6(textote);
+                return centenas[mil3] +  cienes + " veinte mil " + metodo6.veintesmet6(textote);
             }else if (mil1==2 && mil2==0) {
                 return centenas[mil3] +  cienes + " veinte " + miles + " " + metodo6.excepmet6(textote);
             } else if (mil2==1){
@@ -251,9 +282,9 @@ public class Metodos {
             if (mil1==2 && mil2==1 && decenita==2)
                 return centenas[mil3] + " veintiún " + metodo6.veintesmet6(textote);
             else if (mil1==2 && mil2==1 && decenita==1) {
-                return centenas[mil3] +  " veintiún " + metodo6.diecesmet6(textote);
+                return centenas[mil3] +  " veintiún " + metodo6.excepmet6(textote);
             } else if (mil1==2 && mil2==0 && decenita==1) {
-                return centenas[mil3] +  " veinte " + metodo6.diecesmet6(textote);
+                return centenas[mil3] +  " veinte " + metodo6.excepmet6(textote);
             }else if (mil1==2 && mil2==0 && decenita==2) {
                 return centenas[mil3] +  " veinte " + metodo6.veintesmet6(textote);
             }else if (mil1==2 && mil2==1){
